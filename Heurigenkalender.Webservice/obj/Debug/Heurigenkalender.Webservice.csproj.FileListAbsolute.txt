@@ -1,0 +1,8 @@
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\bin\Heurigenkalender.Webservice.dll.config
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\bin\Heurigenkalender.Webservice.dll
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\bin\Heurigenkalender.Webservice.pdb
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\obj\Debug\Heurigenkalender.Webservice.csprojResolveAssemblyReference.cache
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\obj\Debug\Heurigenkalender.Webservice.dll
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\obj\Debug\Heurigenkalender.Webservice.pdb
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\bin\Heurigenkalender.Webservice.Shared.dll
+G:\C#\heurigenkalender\Heurigenkalender.Webservice\bin\Heurigenkalender.Webservice.Shared.pdb

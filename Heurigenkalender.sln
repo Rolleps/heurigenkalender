@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heurigenkalender.Webservice", "Heurigenkalender.Webservice\Heurigenkalender.Webservice.csproj", "{B8F33D00-C7CD-4E72-B431-02C4227ECAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heurigenkalender.Webservice.Shared", "Heurigenkalender.Webservice.Shared\Heurigenkalender.Webservice.Shared.csproj", "{91171366-7F11-4C7A-840D-2B6E8628CC6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8F33D00-C7CD-4E72-B431-02C4227ECAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8F33D00-C7CD-4E72-B431-02C4227ECAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8F33D00-C7CD-4E72-B431-02C4227ECAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8F33D00-C7CD-4E72-B431-02C4227ECAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
