@@ -9,14 +9,14 @@ namespace Heurigenkalender.Webservice.Shared
 {
     public class HeurigenService : IHeurigenService
     {
-        public void CreateHeurigen(Heurigen heurigen)
+        public string CreateHeurigen(Heurigen heurigen)
         {
-            throw new NotImplementedException();
+            return "id: " + heurigen.Id + " name: " + heurigen.Name;
         }
 
         public string GetHeurigen(string id)
         {
-            return "got id" + id;
+            return "got id " + id;
         }
     }
 }

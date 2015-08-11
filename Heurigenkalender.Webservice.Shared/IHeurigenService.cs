@@ -15,7 +15,7 @@ namespace Heurigenkalender.Webservice.Shared
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
             UriTemplate = "/")]
-        void CreateHeurigen(Heurigen heurigen);
+        string CreateHeurigen(Heurigen heurigen);
 
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json,
