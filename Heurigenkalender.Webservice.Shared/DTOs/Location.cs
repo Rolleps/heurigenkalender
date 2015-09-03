@@ -11,8 +11,8 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
     public class Location
     {
         [DataMember(Name = "Latitude")]
-        private double Latitude { get; set; }
+        public double Latitude { get; set; }
         [DataMember(Name = "Longitude")]
-        private double Longitude { get; set; }
+        public double Longitude { get; set; }
     }
 }

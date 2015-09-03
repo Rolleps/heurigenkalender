@@ -10,9 +10,17 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
     [DataContract(Name = "OpeningTime")]
     public class OpeningTime
     {
-        [DataMember(Name = "From")]
-        public DateTime From { get; set; }
-        [DataMember(Name = "To")]
-        public DateTime To { get; set; }
+        [DataMember(Name = "DateFrom")]
+        public DateTime DateFrom { get; set; }
+        [DataMember(Name = "DateTo")]
+        public DateTime DateTo { get; set; }
+
+        [DataMember(Name = "Days")]
+        public List<Day> Days { get; set; }
+
+        public OpeningTime()
+        {
+            this.Days = new List<Day>();
+        }
     }
 }

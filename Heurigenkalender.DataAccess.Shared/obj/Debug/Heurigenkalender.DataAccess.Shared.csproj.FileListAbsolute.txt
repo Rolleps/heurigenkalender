@@ -1,0 +1,11 @@
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\Heurigenkalender.DataAccess.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\Heurigenkalender.DataAccess.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\Heurigenkalender.Webservice.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\Iesi.Collections.dll
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\NHibernate.dll
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\Heurigenkalender.Webservice.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\Iesi.Collections.xml
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\bin\Debug\NHibernate.xml
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\obj\Debug\Heurigenkalender.DataAccess.Shared.csprojResolveAssemblyReference.cache
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\obj\Debug\Heurigenkalender.DataAccess.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Shared\obj\Debug\Heurigenkalender.DataAccess.Shared.pdb

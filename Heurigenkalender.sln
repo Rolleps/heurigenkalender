@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heurigenkalender.Webservice
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heurigenkalender.Webservice.Shared", "Heurigenkalender.Webservice.Shared\Heurigenkalender.Webservice.Shared.csproj", "{91171366-7F11-4C7A-840D-2B6E8628CC6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heurigenkalender.DataAccess.Shared", "Heurigenkalender.DataAccess.Shared\Heurigenkalender.DataAccess.Shared.csproj", "{3AE755E4-93E0-4AEB-B654-2D161530AC87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heurigenkalender.DataAccessMySQL", "Heurigenkalender.DataAccessMySQL\Heurigenkalender.DataAccessMySQL.csproj", "{D0E9834C-F94B-4145-8C20-1627E380F182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91171366-7F11-4C7A-840D-2B6E8628CC6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE755E4-93E0-4AEB-B654-2D161530AC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE755E4-93E0-4AEB-B654-2D161530AC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE755E4-93E0-4AEB-B654-2D161530AC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE755E4-93E0-4AEB-B654-2D161530AC87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E9834C-F94B-4145-8C20-1627E380F182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E9834C-F94B-4145-8C20-1627E380F182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E9834C-F94B-4145-8C20-1627E380F182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E9834C-F94B-4145-8C20-1627E380F182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

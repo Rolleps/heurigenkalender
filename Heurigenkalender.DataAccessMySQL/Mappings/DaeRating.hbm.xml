@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Heurigenkalender.DataAccess.Shared"
+                   namespace="Heurigenkalender.DataAccess.Shared.DataAccessEntities">
+  <class name="DaeRating" table="Rating" lazy="false">
+    <property name="RatingText" />
+    <property name="RatingStars" />
+    <property name="FkHeurigenId"/>
+  </class>
+</hibernate-mapping>

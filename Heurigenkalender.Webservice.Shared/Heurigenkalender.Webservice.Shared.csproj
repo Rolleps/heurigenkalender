@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\Day.cs" />
     <Compile Include="DTOs\Heurigen.cs" />
     <Compile Include="DTOs\Location.cs" />
     <Compile Include="DTOs\OpeningTime.cs" />
