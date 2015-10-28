@@ -11,10 +11,22 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
     public class Day
     {
         [DataMember(Name = "Weekday")]
-        public string Weekday { get; set; }
+        public Weekdays Weekday { get; set; }
         [DataMember(Name = "FromTime")]
         public string TimeFrom { get; set; }
         [DataMember(Name = "TimeTo")]
         public string TimeTo { get; set; }
+    }
+
+    [DataContract(Name = "Weekdays")]
+    public enum Weekdays
+    {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
     }
 }

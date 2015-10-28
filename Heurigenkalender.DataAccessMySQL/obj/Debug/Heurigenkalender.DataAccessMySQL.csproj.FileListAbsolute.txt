@@ -11,3 +11,5 @@ G:\C#\Heurigenkalender\Heurigenkalender.DataAccessMySQL\bin\Debug\NHibernate.xml
 G:\C#\Heurigenkalender\Heurigenkalender.DataAccessMySQL\obj\Debug\Heurigenkalender.DataAccessMySQL.csprojResolveAssemblyReference.cache
 G:\C#\Heurigenkalender\Heurigenkalender.DataAccessMySQL\obj\Debug\Heurigenkalender.DataAccessMySQL.dll
 G:\C#\Heurigenkalender\Heurigenkalender.DataAccessMySQL\obj\Debug\Heurigenkalender.DataAccessMySQL.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccessMySQL\bin\Debug\Heurigenkalender.DataAccessMySQL.dll.config
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccessMySQL\bin\Debug\MySql.Data.dll

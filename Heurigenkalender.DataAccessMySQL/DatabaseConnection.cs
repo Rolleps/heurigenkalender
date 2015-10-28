@@ -20,7 +20,8 @@ namespace Heurigenkalender.DataAccessMySQL
         {
             var configuration = new Configuration();
             configuration.DataBaseIntegration(x => {
-                x.ConnectionString = "";
+                x.ConnectionString = "Server=localhost; Database=heurigenkalender; " +
+                                     "Persist Security Info=True; Uid=root; Password=;";
                 x.Dialect<MySQLDialect>();
             });
             configuration.AddAssembly(Assembly.GetExecutingAssembly());

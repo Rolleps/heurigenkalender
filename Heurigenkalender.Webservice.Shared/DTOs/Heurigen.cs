@@ -40,15 +40,21 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
         [DataMember(Name = "Location")]
         public Location Location { get; set; }
 
-        [DataMember(Name = "HotFood")]
-        public bool HotFood { get; set; }
+        [DataMember(Name = "WarmFood")]
+        public bool WarmFood { get; set; }
 
+        [DataMember(Name = "Logo")]
+        public byte[] Logo { get; set; }
+
+        [DataMember(Name = "AvarageRating")]
+        public double AvarageRating { get; set; }
 
         [DataMember(Name = "Ratings")]
         public List<Rating> Ratings { get; set; }
 
         [DataMember(Name = "OpeningTimes")]
         public List<OpeningTime> OpeningTimes { get; set; }
+
 
 
         public Heurigen()

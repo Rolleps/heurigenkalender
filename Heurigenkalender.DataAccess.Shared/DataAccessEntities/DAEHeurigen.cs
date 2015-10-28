@@ -30,6 +30,10 @@ namespace Heurigenkalender.DataAccess.Shared.DataAccessEntities
 
         public Location Location { get; set; }
 
-        public bool HotFood { get; set; }
+        public bool? WarmFood { get; set; }
+
+        public byte[] Logo { get; set; }
+
+        public double AvarageRating { get; set; }
     }
 }
