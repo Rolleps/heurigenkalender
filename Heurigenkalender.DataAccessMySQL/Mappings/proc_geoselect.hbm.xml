@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="Heurigenkalender.DataAccess.Shared"
+                   namespace="Heurigenkalender.DataAccess.Shared.DataAccessEntities">
+  <sql-query  name="proc_geoselect">
+    <return class="DaeHeurigen">
+      <return-property column="Id" name="Id"/>
+      <return-property column="Name" name="Name"/>
+      <return-property column="Postcode" name="Postcode"/>
+      <return-property column="City" name="City"/>
+      <return-property column="Street" name="Street"/>
+      <return-property column="Telephone" name="Telephone"/>
+      <return-property column="Mail" name="Mail"/>
+      <return-property column="HomepageUrl" name="HomepageUrl"/>
+      <return-property column="Description" name="Description"/>
+      <return-property column="Latitude" name="Latitude"/>
+      <return-property column="Longitude" name="Longitude"/>
+      <return-property column="WarmFood" name="WarmFood"/>
+      <return-property column="AverageRating" name="AverageRating"/>
+      <return-property column="Logo" name="Logo"/>
+      <return-property column="Distance" name="Distance"/>
+    </return>
+    call proc_geoselect(:Latitude_, :Longitude_, :Radius_, :Skip_, :Limit_);
+  </sql-query>
+
+</hibernate-mapping>

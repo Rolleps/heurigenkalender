@@ -28,12 +28,18 @@ namespace Heurigenkalender.DataAccess.Shared.DataAccessEntities
 
         public string Description { get; set; }
 
-        public Location Location { get; set; }
+        public double Longitude { get; set; }
+
+        public double Latitude { get; set; }
+
+        //public GeoAPI.Geometries.IGeometry Location { get; set; }
+
+        public double Distance { get; set; }
 
         public bool? WarmFood { get; set; }
 
         public byte[] Logo { get; set; }
 
-        public double AvarageRating { get; set; }
+        public double AverageRating { get; set; }
     }
 }

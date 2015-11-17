@@ -3,6 +3,10 @@
                    assembly="Heurigenkalender.DataAccess.Shared"
                    namespace="Heurigenkalender.DataAccess.Shared.DataAccessEntities">
   <class name="DaeRating" table="Rating" lazy="false">
+    <id name="Id">
+      <column name="Id" />
+      <generator class="native" />
+    </id>
     <property name="RatingText" />
     <property name="RatingStars" />
     <property name="FkHeurigenId"/>

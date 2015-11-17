@@ -15,10 +15,11 @@
     <property name="Mail" />
     <property name="HomepageUrl" />
     <property name="Description" />
-    <component name="Location">
-      <property name="Latitude" column="Latitude"/>
-      <property name="Longitude" column="Longitude"/>
-    </component>
-    <property name="TrackingCode" />
-  </class>
+    <property name="Longitude"/>
+    <property name="Latitude"/>
+    <property name="WarmFood" />
+    <property name="AverageRating" />
+    <property name="Logo" />
+    <property name="Distance"/>
+    </class>
 </hibernate-mapping>

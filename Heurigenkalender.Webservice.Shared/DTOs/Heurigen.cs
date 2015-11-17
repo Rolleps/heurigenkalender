@@ -46,8 +46,8 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
         [DataMember(Name = "Logo")]
         public byte[] Logo { get; set; }
 
-        [DataMember(Name = "AvarageRating")]
-        public double AvarageRating { get; set; }
+        [DataMember(Name = "AverageRating")]
+        public double AverageRating { get; set; }
 
         [DataMember(Name = "Ratings")]
         public List<Rating> Ratings { get; set; }

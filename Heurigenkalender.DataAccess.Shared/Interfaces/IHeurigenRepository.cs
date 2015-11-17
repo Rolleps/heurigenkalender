@@ -9,8 +9,9 @@ using Heurigenkalender.Webservice.Shared.DTOs;
 
 namespace Heurigenkalender.DataAccess.Shared.Interfaces
 {
-    public interface IHeurigenRepository : IRepository<Heurigen>
+    public interface IHeurigenRepository
     {
+
         List<DaeHeurigen> SelectAll(string name, int skip, int limit);
         DaeHeurigen SelectById(int id);
         List<DaeHeurigen> SelectByLocation(Location point, int radius, int skip, int limit);

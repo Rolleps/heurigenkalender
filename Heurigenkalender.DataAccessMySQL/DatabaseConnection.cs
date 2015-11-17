@@ -15,14 +15,17 @@ namespace Heurigenkalender.DataAccessMySQL
     public class DatabaseConnection
     {
         private readonly ISessionFactory _sessionFactory;
-
         public DatabaseConnection()
         {
             var configuration = new Configuration();
-            configuration.DataBaseIntegration(x => {
+            configuration.DataBaseIntegration(x =>
+            {
                 x.ConnectionString = "Server=localhost; Database=heurigenkalender; " +
-                                     "Persist Security Info=True; Uid=root; Password=;";
-                x.Dialect<MySQLDialect>();
+                                     "Persist Security Info=True; User ID=root; Password=";
+                x.Driver<MySqlDataDriver>();
+                x.Dialect<MySQL5Dialect>();
+                x.LogFormattedSql = false;
+                x.LogSqlInConsole = false;
             });
             configuration.AddAssembly(Assembly.GetExecutingAssembly());
             _sessionFactory = configuration.BuildSessionFactory();
