@@ -20,5 +20,6 @@
     <property name="WarmFood" />
     <property name="AverageRating" />
     <property name="Logo" />
-    </class>
+    <property name="Distance"/>
+  </class>
 </hibernate-mapping>

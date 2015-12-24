@@ -12,8 +12,7 @@ namespace Heurigenkalender.DataAccess.Shared.Interfaces
     public interface IHeurigenRepository
     {
 
-        List<DaeHeurigen> SelectAll(string name, int skip, int limit);
-        DaeHeurigen SelectById(int id);
+        List<DaeHeurigen> Select(string name, int id, int skip, int limit);
         List<DaeHeurigen> SelectByLocation(Location point, int radius, int skip, int limit);
     }
 }

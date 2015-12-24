@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mappings\DaeDay.hbm.xml" />
+    <Content Include="Mappings\DaeGeoHeurigen.xml" />
     <EmbeddedResource Include="Mappings\DaeRating.hbm.xml" />
     <EmbeddedResource Include="Mappings\DaeOpeningTime.hbm.xml" />
     <EmbeddedResource Include="Mappings\proc_geoselect.hbm.xml" />

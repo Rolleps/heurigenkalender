@@ -2,3 +2,4 @@ G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkale
 G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.Webservice.Shared.pdb
 G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\obj\Debug\Heurigenkalender.Webservice.Shared.dll
 G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\obj\Debug\Heurigenkalender.Webservice.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\obj\Debug\Heurigenkalender.Webservice.Shared.csprojResolveAssemblyReference.cache

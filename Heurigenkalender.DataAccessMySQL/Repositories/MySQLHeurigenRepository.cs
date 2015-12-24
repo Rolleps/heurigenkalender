@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,16 +43,17 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                     }
                 }
             }
-            return -1;
+            return -1; //@TODO: Response Object
         }
 
         public DaeHeurigen Update(DaeHeurigen heurigen)
         {
             using (var session = _sessionFactory.OpenSession())
             {
-                var heurigenToUpdate = new DaeHeurigen();
                 using (var transaction = session.BeginTransaction())
                 {
+                    DaeHeurigen heurigenToUpdate;
+
                     try
                     {
                         heurigenToUpdate = session.Query<DaeHeurigen>()
@@ -64,7 +66,23 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                         throw new DataAccessLayerException("Failed to Select Heurigen at Update", e);
                     }
 
-                    heurigenToUpdate = heurigen;
+                    try
+                    {
+                        foreach (var prop in heurigen.GetType().GetProperties()
+                            .Where(x => !x.GetIndexParameters().Any())
+                            .Where(x => x.CanRead && x.CanWrite))
+                        {
+                            var value = prop.GetValue(heurigen, null);
+                            prop.SetValue(heurigenToUpdate, value, null);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        //log fehlt
+                        throw new DataAccessLayerException("Failed during Updating Objects for DB Update", e);
+                    }
+                    
+
 
                     try
                     {
@@ -74,7 +92,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                     catch (Exception e)
                     {
                         //_log.Error("MySQLRepo: Failed to Update Heurigen");
-                        throw new DataAccessLayerException("Failed to Update MainWarehouse in Database", e);
+                        throw new DataAccessLayerException("Failed to Update Heurigen in Database", e);
                     }
                 }
             }
@@ -101,63 +119,39 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
             }
         }
 
-        public List<DaeHeurigen> SelectAll(string name = "", int skip = 0, int limit = 20)
+        public List<DaeHeurigen> Select(string name = "", int id = 0, int skip = 0, int limit = 20)
         {
             List<DaeHeurigen> returnList;
             using (var session = _sessionFactory.OpenSession())
             {
                 try
                 {
-                    returnList = (List<DaeHeurigen>)session.CreateCriteria<DaeHeurigen>()
-                        .SetProjection(Projections.ProjectionList()
-                            .Add(Projections.Property("Id"), "Id")
-                            .Add(Projections.Property("Name"), "Name")
-                            .Add(Projections.Property("Postcode"), "Postcode")
-                            .Add(Projections.Property("City"), "City")
-                            .Add(Projections.Property("Street"), "Street")
-                            .Add(Projections.Property("Telephone"), "Telephone")
-                            .Add(Projections.Property("Mail"), "Mail")
-                            .Add(Projections.Property("HomepageUrl"), "HomepageUrl")
-                            .Add(Projections.Property("Description"), "Description")
-                            .Add(Projections.Property("Latitude"), "Latitude")
-                            .Add(Projections.Property("Longitude"), "Longitude")
-                            .Add(Projections.Property("WarmFood"), "WarmFood")
-                            //.Add(Projections.Property("Name"), "Name") --> @TODO JOIN mit Ratings
-                            .Add(Projections.Property("Logo"), "Logo"))
-                        .SetFirstResult(skip)
-                        .SetMaxResults(limit)
-                        .SetResultTransformer(Transformers.AliasToBean<DaeHeurigen>())
-                    .List<DaeHeurigen>();
+                    var criteria = session.CreateCriteria<DaeHeurigen>();
+
+                    if (!string.IsNullOrEmpty(name))
+                    {
+                        criteria.Add(Restrictions.Eq("Name", name));
+                    }
+                    if (id != 0)
+                    {
+                        criteria.Add(Restrictions.Eq("Id", id));
+                    }
+
+                    criteria.SetFirstResult(skip);
+                    criteria.SetMaxResults(limit);
+
+                    returnList = (List<DaeHeurigen>) criteria.List<DaeHeurigen>();
+                    
                 }
                 catch (Exception e)
                 {
-                    throw new DataAccessLayerException("MySQLRepo: Failed to Select Heurigen", e);
+                    throw new DataAccessLayerException("MySQLRepo: Failed to Select all Heurigen", e);
                 }
                 
-
-                /*
-                using (var transaction = session.BeginTransaction())
-                {
-                    try
-                    {
-                        returnList = session.Query<DaeHeurigen>()
-                            .ToList();
-                        transaction.Commit();
-                    }
-                    catch (Exception e)
-                    {
-                        throw new DataAccessLayerException("MySQLRepo: Failed to Select all Heurigen", e);
-                    }
-                }
-                */
             }
             return returnList;
         }
 
-        public DaeHeurigen SelectById(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<DaeHeurigen> SelectByLocation(Location point, int radius, int skip, int limit)
         {
