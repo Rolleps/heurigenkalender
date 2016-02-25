@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using GeoAPI.Geometries;
 using Heurigenkalender.DataAccess.Shared.DataAccessEntities;
 using Heurigenkalender.DataAccessMySQL;
 using Heurigenkalender.DataAccessMySQL.Repositories;
@@ -11,13 +10,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NetTopologySuite.Geometries;
 using NHibernate.Util;
 using Remotion.Linq;
-using Location = Heurigenkalender.Webservice.Shared.DTOs.Location;
 
 namespace Heurigenkalender.DataAccess.Tests
 {
     [TestClass]
     public class UnitTest1
     {
+        /*
         [TestMethod]
         public void TestDBConnection_MySQLLocalhost()
         {
@@ -55,7 +54,7 @@ namespace Heurigenkalender.DataAccess.Tests
         {
             var repo = new MySQLHeurigenRepository();
             var heurigentestobject = new DaeHeurigen();
-            heurigentestobject.Name = "hollabrunnerkebapheurigen";
+            heurigentestobject.Name = "David Heurigen";
             heurigentestobject.Postcode = "2020";
             heurigentestobject.City = "Hollabrunn";
             heurigentestobject.Street = "Marichtalerweg 9";
@@ -66,7 +65,7 @@ namespace Heurigenkalender.DataAccess.Tests
 
 
             //heurigentestobject.Location = point;
-            var dbresponse = repo.Create(heurigentestobject);
+            repo.Create(heurigentestobject);
             Assert.AreEqual(dbresponse, -1);
         }
 
@@ -116,6 +115,7 @@ namespace Heurigenkalender.DataAccess.Tests
             updatedHeurigen.City = "Raschala";
             updatedHeurigen.Street = "Hadmargasse 10";
             updatedHeurigen.Telephone = "0664123456789";
+            updatedHeurigen.Mail = "david@heurigen.at";
 
             var repo = new MySQLHeurigenRepository();
             repo.Update(updatedHeurigen);
@@ -126,7 +126,7 @@ namespace Heurigenkalender.DataAccess.Tests
         }
 
         
-
+    */
 
     }
 }

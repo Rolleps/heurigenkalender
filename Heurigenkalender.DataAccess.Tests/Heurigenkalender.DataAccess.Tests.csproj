@@ -90,6 +90,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Heurigenkalender.Common.Shared\Heurigenkalender.Common.Shared.csproj">
+      <Project>{9c9a05aa-d407-4539-8def-70273f3a7ce0}</Project>
+      <Name>Heurigenkalender.Common.Shared</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Heurigenkalender.DataAccess.Shared\Heurigenkalender.DataAccess.Shared.csproj">
       <Project>{3ae755e4-93e0-4aeb-b654-2d161530ac87}</Project>
       <Name>Heurigenkalender.DataAccess.Shared</Name>

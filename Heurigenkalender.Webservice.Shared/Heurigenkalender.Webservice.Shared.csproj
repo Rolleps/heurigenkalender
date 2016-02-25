@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.2.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.4.2.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -45,12 +49,31 @@
   <ItemGroup>
     <Compile Include="DTOs\Day.cs" />
     <Compile Include="DTOs\Heurigen.cs" />
-    <Compile Include="DTOs\Location.cs" />
+    <Compile Include="DTOs\HeurigenResponse.cs" />
+    <Compile Include="DTOs\IResponse.cs" />
     <Compile Include="DTOs\OpeningTime.cs" />
     <Compile Include="DTOs\Rating.cs" />
     <Compile Include="HeurigenService.cs" />
     <Compile Include="IHeurigenService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Heurigenkalender.Common.Shared\Heurigenkalender.Common.Shared.csproj">
+      <Project>{9C9A05AA-D407-4539-8DEF-70273F3A7CE0}</Project>
+      <Name>Heurigenkalender.Common.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Heurigenkalender.DataAccess.Shared\Heurigenkalender.DataAccess.Shared.csproj">
+      <Project>{3AE755E4-93E0-4AEB-B654-2D161530AC87}</Project>
+      <Name>Heurigenkalender.DataAccess.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Heurigenkalender.DataAccessMySQL\Heurigenkalender.DataAccessMySQL.csproj">
+      <Project>{d0e9834c-f94b-4145-8c20-1627e380f182}</Project>
+      <Name>Heurigenkalender.DataAccessMySQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

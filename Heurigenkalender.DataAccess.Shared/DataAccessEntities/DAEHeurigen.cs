@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Heurigenkalender.Webservice.Shared.DTOs;
 
 namespace Heurigenkalender.DataAccess.Shared.DataAccessEntities
 {
@@ -34,7 +33,7 @@ namespace Heurigenkalender.DataAccess.Shared.DataAccessEntities
 
         //public GeoAPI.Geometries.IGeometry Location { get; set; }
 
-        public double Distance { get; set; }
+        public double? Distance { get; set; }
 
         public bool? WarmFood { get; set; }
 

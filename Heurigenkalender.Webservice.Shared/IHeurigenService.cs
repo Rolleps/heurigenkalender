@@ -9,18 +9,22 @@ using Heurigenkalender.Webservice.Shared.DTOs;
 
 namespace Heurigenkalender.Webservice.Shared
 {
-    [ServiceContract]
+    [ServiceContract (Name = "HeurigenService")]
     internal interface IHeurigenService
     {
         [OperationContract]
         [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/")]
-        string CreateHeurigen(Heurigen heurigen);
+            UriTemplate = "/CreateHeurigen")]
+        HeurigenResponse CreateHeurigen(Heurigen heurigen);
 
-        [OperationContract]
-        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json,
-            UriTemplate = "/getHeurigen/{id}")]
-        String GetHeurigen(string id);
+        [OperationContract (Name = "GetHeurigen")]
+        [WebGet(UriTemplate = "/GetHeurigen?Id={Id}&Name={Name}&Skip={Skip}&Limit={Limit}", ResponseFormat = WebMessageFormat.Json)] 
+        HeurigenResponse GetHeurigen(int id, string name, int skip, int limit);
+
+        [OperationContract(Name = "GetHeurigenByLocation")]
+        [WebGet(UriTemplate = "/GetHeurigenByLocation?Lat={latitude}&Long={longitude}&Radius={radius}&Skip={skip}&Limit={limit}",
+            ResponseFormat = WebMessageFormat.Json)]
+        HeurigenResponse GetHeurigenByLocation(double latitude, double longitude, int radius, int skip, int limit);
     }
-
+    
 }

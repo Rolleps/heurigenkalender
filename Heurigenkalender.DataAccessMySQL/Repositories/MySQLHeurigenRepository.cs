@@ -26,7 +26,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
             _sessionFactory = dbConnection.GetSessionFactory();
         }
 
-        public int Create(DaeHeurigen heurigen)
+        public void Create(DaeHeurigen heurigen)
         {
             using (var session = _sessionFactory.OpenSession())
             {
@@ -43,10 +43,9 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                     }
                 }
             }
-            return -1; //@TODO: Response Object
         }
 
-        public DaeHeurigen Update(DaeHeurigen heurigen)
+        public void Update(DaeHeurigen heurigen)
         {
             using (var session = _sessionFactory.OpenSession())
             {
@@ -96,7 +95,6 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                     }
                 }
             }
-            return heurigen;
         }
 
         public void Delete(DaeHeurigen heurigen)
@@ -113,13 +111,13 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                     catch (Exception e)
                     {
                         //_log.Error("MySQLRepo: Failed to Delete Heurigen in Database");
-                        throw new DataAccessLayerException("Failed to Delete MainWarehouse in Database", e);
+                        throw new DataAccessLayerException("Failed to Delete Heurigen in Database", e);
                     }
                 }
             }
         }
 
-        public List<DaeHeurigen> Select(string name = "", int id = 0, int skip = 0, int limit = 20)
+        public List<DaeHeurigen> Select(string name, int id, int skip, int limit)
         {
             List<DaeHeurigen> returnList;
             using (var session = _sessionFactory.OpenSession())
@@ -130,7 +128,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
 
                     if (!string.IsNullOrEmpty(name))
                     {
-                        criteria.Add(Restrictions.Eq("Name", name));
+                        criteria.Add(Restrictions.Like("Name", name, MatchMode.Anywhere));
                     }
                     if (id != 0)
                     {
@@ -151,8 +149,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
             }
             return returnList;
         }
-
-
+        
         public List<DaeHeurigen> SelectByLocation(Location point, int radius, int skip, int limit)
         {
             List<DaeHeurigen> returnList;

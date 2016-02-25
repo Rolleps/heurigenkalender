@@ -1,0 +1,7 @@
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\bin\Debug\Heurigenkalender.Common.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\bin\Debug\Heurigenkalender.Common.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\obj\Debug\Heurigenkalender.Common.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\obj\Debug\Heurigenkalender.Common.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\bin\Debug\Heurigenkalender.Common.Shared.dll.config
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\bin\Debug\MySql.Data.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Common.Shared\obj\Debug\Heurigenkalender.Common.Shared.csprojResolveAssemblyReference.cache

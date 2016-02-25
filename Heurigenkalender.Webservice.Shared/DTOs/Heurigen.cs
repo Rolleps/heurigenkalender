@@ -11,7 +11,7 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
     public class Heurigen
     {
         [DataMember(Name = "Id")]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
         [DataMember(Name = "Name")]
         public string Name { get; set; }
@@ -55,7 +55,8 @@ namespace Heurigenkalender.Webservice.Shared.DTOs
         [DataMember(Name = "OpeningTimes")]
         public List<OpeningTime> OpeningTimes { get; set; }
 
-
+        [DataMember(Name = "Distance")]
+        public double? Distance { get; set; }
 
         public Heurigen()
         {

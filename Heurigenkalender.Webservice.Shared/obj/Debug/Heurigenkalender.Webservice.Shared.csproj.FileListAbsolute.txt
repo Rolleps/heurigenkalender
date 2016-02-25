@@ -3,3 +3,16 @@ G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkale
 G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\obj\Debug\Heurigenkalender.Webservice.Shared.dll
 G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\obj\Debug\Heurigenkalender.Webservice.Shared.pdb
 G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\obj\Debug\Heurigenkalender.Webservice.Shared.csprojResolveAssemblyReference.cache
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.Common.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.DataAccess.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.DataAccessMySQL.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\NHibernate.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Iesi.Collections.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.Common.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.DataAccess.Shared.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.DataAccessMySQL.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Heurigenkalender.Webservice.Shared.dll.config
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\AutoMapper.dll
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\AutoMapper.xml
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\NHibernate.xml
+G:\C#\Heurigenkalender\Heurigenkalender.Webservice.Shared\bin\Debug\Iesi.Collections.xml

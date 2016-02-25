@@ -21,3 +21,5 @@ G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Tests\bin\Debug\de\Microsoft.
 G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Tests\obj\Debug\Heurigenkalender.DataAccess.Tests.csprojResolveAssemblyReference.cache
 G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Tests\obj\Debug\Heurigenkalender.DataAccess.Tests.dll
 G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Tests\obj\Debug\Heurigenkalender.DataAccess.Tests.pdb
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Tests\bin\Debug\Heurigenkalender.Common.Shared.dll
+G:\C#\Heurigenkalender\Heurigenkalender.DataAccess.Tests\bin\Debug\Heurigenkalender.Common.Shared.pdb
