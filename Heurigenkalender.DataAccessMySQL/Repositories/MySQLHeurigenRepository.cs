@@ -12,6 +12,7 @@ using Heurigenkalender.Webservice.Shared.DTOs;
 using NHibernate;
 using NHibernate.Criterion;
 using NHibernate.Linq;
+using NHibernate.SqlCommand;
 using NHibernate.Transform;
 
 namespace Heurigenkalender.DataAccessMySQL.Repositories
@@ -124,8 +125,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
             {
                 try
                 {
-                    var criteria = session.CreateCriteria<DaeHeurigen>();
-
+                    var criteria = session.CreateCriteria<DaeHeurigen>("heurigen");
                     if (!string.IsNullOrEmpty(name))
                     {
                         criteria.Add(Restrictions.Like("Name", name, MatchMode.Anywhere));
@@ -134,6 +134,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                     {
                         criteria.Add(Restrictions.Eq("Id", id));
                     }
+
 
                     criteria.SetFirstResult(skip);
                     criteria.SetMaxResults(limit);

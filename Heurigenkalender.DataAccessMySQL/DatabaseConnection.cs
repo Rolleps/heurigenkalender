@@ -20,7 +20,8 @@ namespace Heurigenkalender.DataAccessMySQL
             var configuration = new Configuration();
             configuration.DataBaseIntegration(x =>
             {
-                x.ConnectionString = "Server=localhost; Database=heurigenkalender; " +
+                //TODO: root password, Port 4040 only for NEOR PROFILE SQL
+                x.ConnectionString = "Server=localhost; Port=4040; Database=heurigenkalender; " +
                                      "Persist Security Info=True; User ID=root; Password=";
                 x.Driver<MySqlDataDriver>();
                 x.Dialect<MySQL5Dialect>();

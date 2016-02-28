@@ -40,5 +40,16 @@ namespace Heurigenkalender.DataAccess.Shared.DataAccessEntities
         public byte[] Logo { get; set; }
 
         public double AverageRating { get; set; }
+
+        public IList<DaeRating> Ratings { get; set; }
+
+        public IList<DaeOpeningTime> OpeningTimes { get; set; } 
+
+        public DaeHeurigen()
+        {
+            Ratings = new List<DaeRating>();
+            OpeningTimes = new List<DaeOpeningTime>();
+        } 
+
     }
 }

@@ -21,5 +21,15 @@
     <property name="AverageRating" />
     <property name="Logo" />
     <property name="Distance" insert="false" update="false"/>
+    <list name="Ratings" cascade="all-delete-orphan">
+      <key column="FkHeurigenId" />
+      <index column="Id"/>
+      <one-to-many class="DaeRating"/>
+    </list>
+    <list name="OpeningTimes" cascade="all-delete-orphan">
+      <key column="FkHeurigenId" />
+      <index column="Id"/>
+      <one-to-many class="DaeOpeningTime"/>
+    </list>
     </class>
 </hibernate-mapping>
