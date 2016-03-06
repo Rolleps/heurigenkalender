@@ -120,27 +120,50 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
 
         public List<DaeHeurigen> Select(string name, int id, int skip, int limit)
         {
-            List<DaeHeurigen> returnList;
+            IList<DaeHeurigen> returnList;
             using (var session = _sessionFactory.OpenSession())
             {
+
+                DaeHeurigen myHeurigen = null;
+
                 try
                 {
-                    var criteria = session.CreateCriteria<DaeHeurigen>("heurigen");
+                    var query = session.CreateCriteria<DaeHeurigen>("h")
+                    .CreateCriteria("h.Ratings", "r", JoinType.LeftOuterJoin)
+                    .SetProjection(Projections.ProjectionList()
+
+                        .Add(Projections.Property("h.Name").WithAlias(() => myHeurigen.Name))
+                        .Add(Projections.Property("h.Postcode").WithAlias(() => myHeurigen.Postcode))
+                        .Add(Projections.Property("h.City").WithAlias(() => myHeurigen.City))
+                        .Add(Projections.Property("h.Street").WithAlias(() => myHeurigen.Street))
+                        .Add(Projections.Property("h.Telephone").WithAlias(() => myHeurigen.Telephone))
+                        .Add(Projections.Property("h.Mail").WithAlias(() => myHeurigen.Mail))
+                        .Add(Projections.Property("h.HomepageUrl").WithAlias(() => myHeurigen.HomepageUrl))
+                        .Add(Projections.Property("h.Description").WithAlias(() => myHeurigen.Description))
+                        .Add(Projections.Property("h.Latitude").WithAlias(() => myHeurigen.Latitude))
+                        .Add(Projections.Property("h.Longitude").WithAlias(() => myHeurigen.Longitude))
+                        .Add(Projections.Property("h.WarmFood").WithAlias(() => myHeurigen.WarmFood))
+                        .Add(Projections.Property("h.Logo").WithAlias(() => myHeurigen.Logo))
+                        .Add(Projections.Avg("r.RatingStars").WithAlias(() => myHeurigen.AverageRating))
+                        .Add(Projections.GroupProperty("h.Id").WithAlias(() => myHeurigen.Id)))
+
+                        .SetResultTransformer(Transformers.AliasToBean<DaeHeurigen>());
+
+
                     if (!string.IsNullOrEmpty(name))
                     {
-                        criteria.Add(Restrictions.Like("Name", name, MatchMode.Anywhere));
+                        query.Add(Restrictions.Like("h.Name", name, MatchMode.Anywhere));
                     }
                     if (id != 0)
                     {
-                        criteria.Add(Restrictions.Eq("Id", id));
+                        query.Add(Restrictions.Eq("h.Id", id));
                     }
 
+                    query.SetFirstResult(skip);
+                    query.SetMaxResults(limit);
 
-                    criteria.SetFirstResult(skip);
-                    criteria.SetMaxResults(limit);
+                    returnList = query.List<DaeHeurigen>();
 
-                    returnList = (List<DaeHeurigen>) criteria.List<DaeHeurigen>();
-                    
                 }
                 catch (Exception e)
                 {
@@ -148,7 +171,7 @@ namespace Heurigenkalender.DataAccessMySQL.Repositories
                 }
                 
             }
-            return returnList;
+            return (List<DaeHeurigen>) returnList;
         }
         
         public List<DaeHeurigen> SelectByLocation(Location point, int radius, int skip, int limit)
